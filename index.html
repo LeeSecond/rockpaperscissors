@@ -13,5 +13,49 @@
             }
         }
       }
+      function playRound(playerSelection, computerSelection) { // Function that plays one round and checks each possibility in rock, paper, scissors game
+          var point;
+          if(playerSelection == 'Rock') { // Player choose rock
+            if(computerSelection == 'Rock'){
+              console.log("Rock cannot beat rock. It's a tie!");
+              point = 0;
+            }
+            else if(computerSelection == 'Paper'){
+              console.log("Rock cannot beat paper. You lose!");
+              point = -1;
+            }
+            else if(computerSelection == 'Scissors'){
+              console.log("Rock beat scissors. You won!");
+              point = 1;
+            }
+          } else if (playerSelection == 'Paper'){ // Player choose paper
+            if(computerSelection == 'Paper'){
+              console.log("Paper cannot beat paper. It's a tie!");
+              point = 0;
+            }
+            else if(computerSelection == 'Paper'){
+              console.log("Paper cannot beat scissors. You lose!");
+              point = -1;
+            }
+            else if(computerSelection == 'Rock'){
+              console.log("Paper beat rock. You won!");
+              point = 1;
+            }
+          } else if (playerSelection == 'Scissors'){ // Player choose scissors
+            if(computerSelection == 'Scissors'){
+              console.log("Scissors cannot beat scissors. It's a tie!");
+              point = 0;
+            }
+            else if(computerSelection == 'Rock'){
+              console.log("Scissors cannot beat rock. You lose!");
+              point = -1;
+            }
+            else if(computerSelection == 'Paper'){
+              console.log("Scissors beat paper. You won!");
+              point = 1;
+            }
+          }
+          return point;
+        }
   </script>
 </HTML>
