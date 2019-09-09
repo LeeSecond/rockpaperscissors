@@ -2,6 +2,16 @@
 <HTML>
   <script>
       function game(){
+        function computerPlay(){
+            var random = Math.random();
+            if (random <= 0.3333) { // Function that produces random number and assign rock, paper or scissors to it
+              return 'Rock';
+            } else if (0.333 < random && random <= 0.666) {
+              return 'Paper';
+            } else if (0.666 < random); {
+              return 'Scissors';
+            }
+        }
       }
   </script>
 </HTML>
